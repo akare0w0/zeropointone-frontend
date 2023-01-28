@@ -126,8 +126,8 @@ onMounted(() => {
             <div v-if="!userStore.user.value.logged" class="w-full h-full flex items-center justify-center">
                 <img src="@/assets/unlogin_avator.png" class="w-11 h-11 mr-8 invert select-none" />
                 <el-button-group>
-                    <el-button type="primary" round @click="onLogin">登录</el-button>
-                    <el-button type="primary" round plain>注册</el-button>
+                    <el-button type="primary" color="#008080" round @click="onLogin">登录</el-button>
+                    <el-button type="primary" color="#008080" round plain>注册</el-button>
                 </el-button-group>
                 <el-dialog v-model="dialog.visible" :title="dialog.title" width="49.5%" align-center center>
                     <el-form :model="dialog.form" label-width="110px" label-position="left">
@@ -135,7 +135,7 @@ onMounted(() => {
                             <el-input v-model="item.input" clearable :show-password="item.label == '密码' || item.label == '重复密码'"/>
                         </el-form-item>
                     </el-form>
-                    <el-button type="primary" @click="dialog.onClick">
+                    <el-button type="primary" color="#008080" @click="dialog.onClick">
                         {{ dialog.loginMode ? '登录' : '注册' }}
                     </el-button>
                 </el-dialog>

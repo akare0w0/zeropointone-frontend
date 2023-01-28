@@ -6,7 +6,7 @@ const routes: RouteRecordA[] = [
     routeRecord: {
       path: '/',
       name: 'home',
-      component: import('@/views/HomeView.vue'),
+      component: () => import('@/views/HomeView.vue'),
     },
     displayName: '主页',
   },
@@ -14,7 +14,7 @@ const routes: RouteRecordA[] = [
     routeRecord: {
       path: '/search',
       name: 'search',
-      component: import('@/views/SearchView.vue'),
+      component: () => import('@/views/SearchView.vue'),
     },
   },
 ];
